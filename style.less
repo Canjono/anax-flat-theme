@@ -19,3 +19,99 @@
         vertical-align: bottom;
     }
 }
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Size of max navbar button
+.rm-max .rm-small .rm-button {
+    font-size: 2em;
+}
+
+@maxButtonFontSize: 2em;
+
+// Style navbar
+.rm-desktop li {
+    background-color: #096;
+}
+
+@navbarItemBgColor: #096;
+
+
+// Size each item in the header
+.site-logo-text {
+    float: left;
+    width: 30%;
+}
+
+.navbar2 {
+    float: left;
+    width: 70%;
+}
+
+.profile {
+    float: left;
+    display: none;
+}
+
+.site-header {
+    height: 80px;
+}
+
+// Site title
+.site-logo-text {
+    font-size: 2em;
+    
+    a {
+        text-decoration: none;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+
+    .navbar2 {
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .sidebar {
+        //width: 100%;
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+     .site-logo-text {
+         width: 90%;
+     }
+     
+     .navbar2 {
+         display: none;
+     }
+
+     .profile {
+         display: block;
+         width: 10%;
+     }
+ }
