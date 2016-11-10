@@ -3,8 +3,6 @@
 */
 @import url(modules.less);
 
-
-
 /** --------------------------------------------------------------
  *  Logo images
  */
@@ -25,18 +23,16 @@
  */
 
 // Size of max navbar button
-.rm-max .rm-small .rm-button {
-    font-size: 2em;
-}
-
 @maxButtonFontSize: 2em;
 
 // Style navbar
-.rm-desktop li {
-    background-color: #096;
-}
+@navbarItemHoverBgColor: #D6D6D6;
+@navbarItemSelectedBgColor: #00C200;
 
-@navbarItemBgColor: #096;
+.rm-desktop li a:hover,
+.rm-desktop li.current-menu-item a {
+    text-decoration: none;
+}
 
 
 // Size each item in the header
@@ -46,8 +42,7 @@
 }
 
 .navbar2 {
-    float: left;
-    width: 70%;
+    float: right;
 }
 
 .profile {
@@ -68,6 +63,7 @@
     }
 }
 
+
 /** --------------------------------------------------------------
  *  Responsive design
  */
@@ -75,21 +71,44 @@ img {
     max-width: 100%;
 }
 
+@media screen and (max-width: 970px) {
+    .main.has-sidebar {
+        article {
+            padding: 0 1em;
+        }
+    }
+
+    .footer-column-wrapper {
+        margin: 0 1em;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .article {
+        margin: 0 1em;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .site-logo-text {
         width: 40%;
-    }
-
-    .navbar2 {
-        width: 60%;
     }
 }
 
 
 @media screen and (max-width: 750px) {
+    .main.has-sidebar {
+        width: 100%;
+    }
+
     .sidebar {
         //width: 100%;
         display: none;
+    }
+
+    .article .img-about {
+        width: 100%;
+        margin-bottom: 1em;
     }
 }
 
@@ -115,3 +134,11 @@ img {
          width: 10%;
      }
  }
+
+@media screen and (max-width: 440px) {
+    .article {
+        .img-me {
+            width: 100%;
+        }
+    }
+}

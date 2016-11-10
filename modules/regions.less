@@ -1,6 +1,11 @@
 /**
  * Regions, basics to show off the regions.
  */
+
+ html {
+     overflow-y: scroll;
+ }
+
 .wrap-all {
     margin: 0 auto;
     max-width: 950px;
@@ -15,16 +20,6 @@
     overflow: auto;
 }
 
-.sidebar {
-    width: 33%;
-    float: left;
-}
-
-.main .has-sidebar {
-    width: 67%;
-    float: left;
-}
-
 .outer-wrap-footer {
     clear: both;
     margin-bottom: 22px;
@@ -36,7 +31,7 @@
     ul {
         margin: 0;
         padding: 0;
-        list-type: none;
+        list-style: none;
     }
 
     li {
@@ -84,4 +79,72 @@
 
 .site-header {
     position: relative;
+}
+
+/**---------------------------------------------------------------
+ * Main
+ */
+.main.has-sidebar {
+    width: 67%;
+    float: left;
+
+    .article {
+        margin: 0;
+    }
+}
+
+.article {
+    line-height: 1.5em;
+    margin: 0 3em;
+
+    .img-me {
+        float: left;
+        width: 200px;
+        margin: 0 1em .5em 0;
+    }
+
+    .img-about {
+        float: right;
+        width: 400px;
+    }
+}
+
+.sidebar {
+    width: 33%;
+    float: left;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li:hover {
+            background-color: @navbarItemSelectedBgColor;
+        }
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+
+}
+
+ /**--------------------------------------------------------------
+  * After main
+  */
+.after-main {
+    margin-top: 30px;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding-bottom: 15px;
+    img {
+        float: left;
+        width: 100px;
+        border-radius: 50%;
+        margin: 0 1em 0 0;
+    }
+
+    .content {
+        overflow: auto;
+    }
 }

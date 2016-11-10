@@ -417,6 +417,9 @@ template {
 /**
  * Regions, basics to show off the regions.
  */
+html {
+  overflow-y: scroll;
+}
 .wrap-all {
   margin: 0 auto;
   max-width: 950px;
@@ -428,14 +431,6 @@ template {
 .footer-column-wrapper {
   overflow: auto;
 }
-.sidebar {
-  width: 33%;
-  float: left;
-}
-.main .has-sidebar {
-  width: 67%;
-  float: left;
-}
 .outer-wrap-footer {
   clear: both;
   margin-bottom: 22px;
@@ -446,7 +441,7 @@ template {
 .site-footer ul {
   margin: 0;
   padding: 0;
-  list-type: none;
+  list-style: none;
 }
 .site-footer li {
   display: inline;
@@ -480,6 +475,62 @@ template {
 }
 .site-header {
   position: relative;
+}
+/**---------------------------------------------------------------
+ * Main
+ */
+.main.has-sidebar {
+  width: 67%;
+  float: left;
+}
+.main.has-sidebar .article {
+  margin: 0;
+}
+.article {
+  line-height: 1.5em;
+  margin: 0 3em;
+}
+.article .img-me {
+  float: left;
+  width: 200px;
+  margin: 0 1em .5em 0;
+}
+.article .img-about {
+  float: right;
+  width: 400px;
+}
+.sidebar {
+  width: 33%;
+  float: left;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li:hover {
+  background-color: #00C200;
+}
+.sidebar a {
+  color: #000;
+  text-decoration: none;
+}
+/**--------------------------------------------------------------
+  * After main
+  */
+.after-main {
+  margin-top: 30px;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  padding-bottom: 15px;
+}
+.after-main img {
+  float: left;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0 1em 0 0;
+}
+.after-main .content {
+  overflow: auto;
 }
 /**
  * Style for responsive menu
@@ -571,10 +622,16 @@ a.rm-button.rm-clicked .rm-button-face-2 {
  * Menu layout for the desktop variant, usually full width of browser.
  */
 .rm-desktop ul {
-  background-color: #096;
+  background-color: inherit;
 }
 .rm-desktop li {
   position: relative;
+}
+.rm-desktop li.rm-selected-parent,
+.rm-desktop li.rm-selected,
+.rm-desktop li.selected-parent,
+.rm-desktop li.selected {
+  background-color: #00C200;
 }
 .rm-desktop li a:hover,
 .rm-desktop li.current-menu-item a {
@@ -582,11 +639,11 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 }
 .rm-desktop li a {
   color: inherit;
-  background-color: #096;
+  background-color: inherit;
 }
 .rm-desktop li a:hover {
   color: inherit;
-  background-color: inherit;
+  background-color: #D6D6D6;
 }
 .rm-desktop li:hover > ul {
   left: 0;
@@ -722,19 +779,16 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 /** --------------------------------------------------------------
  *  Header
  */
-.rm-max .rm-small .rm-button {
-  font-size: 2em;
-}
-.rm-desktop li {
-  background-color: #096;
+.rm-desktop li a:hover,
+.rm-desktop li.current-menu-item a {
+  text-decoration: none;
 }
 .site-logo-text {
   float: left;
   width: 30%;
 }
 .navbar2 {
-  float: left;
-  width: 70%;
+  float: right;
 }
 .profile {
   float: left;
@@ -755,17 +809,34 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 img {
   max-width: 100%;
 }
+@media screen and (max-width: 970px) {
+  .main.has-sidebar article {
+    padding: 0 1em;
+  }
+  .footer-column-wrapper {
+    margin: 0 1em;
+  }
+}
+@media screen and (max-width: 940px) {
+  .article {
+    margin: 0 1em;
+  }
+}
 @media screen and (max-width: 900px) {
   .site-logo-text {
     width: 40%;
   }
-  .navbar2 {
-    width: 60%;
-  }
 }
 @media screen and (max-width: 750px) {
+  .main.has-sidebar {
+    width: 100%;
+  }
   .sidebar {
     display: none;
+  }
+  .article .img-about {
+    width: 100%;
+    margin-bottom: 1em;
   }
 }
 @media screen and (max-width: 700px) {
@@ -783,5 +854,10 @@ img {
   .profile {
     display: block;
     width: 10%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .article .img-me {
+    width: 100%;
   }
 }
