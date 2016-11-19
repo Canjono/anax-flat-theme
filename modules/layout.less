@@ -1,0 +1,295 @@
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyOtherElements();
+}
+
+.inner-wrap {
+    .container();
+    max-width: 960px;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+/**
+ * Grid page
+ */
+.route-grid {
+    .inner-wrap {
+        .showGrid();
+    }
+    .sidebar {
+        table {
+            .fontSize(0.7em);
+            border: 1px solid #333;
+            box-sizing: border-box;
+            margin-top: 0;
+            margin-bottom: @magicNumber;
+            border-spacing: 0;
+
+            th,
+            td {
+                padding: 0 1em;;
+            }
+
+            tr {
+                text-align: left;
+                vertical-align: top;
+            }
+
+            .center {
+                text-align: center;
+            }
+
+            img {
+                height: 10 * @magicNumber;
+            }
+        }
+
+    }
+}
+
+/**
+ * Typography page
+ */
+body.route-typography {
+    .showHorizontalGrid();
+
+    table {
+        .fontSize(1em);
+        border: 1px solid #333;
+        box-sizing: border-box;
+        margin-top: 0;
+        margin-bottom: @magicNumber;
+        border-spacing: 0;
+
+        th,
+        td {
+            padding: 0 1em;;
+        }
+    }
+    
+    code,
+    i,
+    b,
+    em,
+    strong {
+    line-height: 1em;
+    }
+
+    pre code {
+    line-height: inherit;
+    }
+}
+
+.row {
+    .row();
+}
+
+/**
+ * Header
+ */
+.site-header {
+    .column(12);
+    height: 3 * @magicNumber;
+    .site-logo-text {
+        .fontSize(3em);
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+    .navbar2 {
+        float: right;
+        .selected {
+            text-decoration: underline;
+        }
+    }
+    .profile {
+        display: none;
+        float: right;
+    }
+
+    // Size of max navbar button
+    .rm-max .rm-small .rm-button {
+        .fontSize(2em);
+    }
+}
+
+/**
+ * Flash
+ */
+.flash-wrap {
+    .column(12);
+    @flashHeight: 8 * @magicNumber;
+    height: @flashHeight;
+    
+    img {
+        height: @flashHeight;
+    }
+}
+
+/**
+ * Breadcrumb
+ */
+.breadcrumb-wrap {
+    .column(12);
+    li {
+        display: inline;
+
+        & ~ li {
+            &::before {
+                content: "» ";
+            }
+
+        }
+    }
+}
+
+/**
+ * Main
+ */
+.main {
+    .column(12);
+    .img-me {
+        float: left;
+        height: 10 * @magicNumber - @magicNumber / 2;
+        margin-right: 1em;
+    }
+
+    .img-about {
+        float: right;
+        height: 6 * @magicNumber - @magicNumber / 2;
+        width: 250px;
+    }
+    
+}
+
+.main.has-sidebar {
+    .column(9);
+
+    .previous {
+        float: left;
+    }
+    .next {
+        float: right;
+    }
+}
+
+/**
+ * Sidebar
+ */
+.sidebar {
+    .column(3);
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        .selected {
+            a {
+                color: #00C200;
+            }
+        }
+        
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+} 
+
+/**
+ * After main
+ */
+.after-main {
+    .column(12);
+    .img-byline {
+        float: left;
+        margin-right: 1em;
+        width: 80px;
+        border-radius: 50%;
+    }
+}
+
+/**
+ * Footer
+ */
+.footer {
+    .footer-column {
+        .column(4);
+    }
+
+    .site-footer {
+        .column(12);
+        text-align: center;
+
+        li {
+            display: inline-block;
+        }
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+@media screen and (max-width: 970px) {
+    .article,
+    .next-previous,
+    .after-main,
+    .footer {
+        padding-left: 0.5em;
+        padding-right: 1em;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .flash-wrap,
+    .breadcrumb-wrap,
+    .sidebar {
+        display: none;
+    }
+    .main.has-sidebar {
+        .column(12);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+        .footer-column {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .site-header {
+        .navbar2 {
+            display: none;
+        }
+        .profile {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .main {
+        .img-me,
+        .img-about {
+            height: auto;
+            margin-bottom: @magicNumber;
+            width: 100%;
+        }
+    }
+}

@@ -148,3 +148,128 @@
         overflow: auto;
     }
 }
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+// Size of max navbar button
+@maxButtonFontSize: 3em;
+
+// Style navbar
+@navbarItemHoverBgColor: #D6D6D6;
+@navbarItemSelectedBgColor: #00C200;
+
+.rm-desktop li a:hover,
+.rm-desktop li.current-menu-item a {
+    text-decoration: none;
+}
+
+
+// Size each item in the header
+.site-logo-text {
+    float: left;
+    width: 30%;
+}
+
+.navbar2 {
+    float: right;
+}
+
+.profile {
+    float: left;
+    display: none;
+}
+
+.site-header {
+    height: 80px;
+}
+
+// Site title
+.site-logo-text {
+    font-size: 2em;
+    
+    a {
+        text-decoration: none;
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 970px) {
+    .main.has-sidebar {
+        article {
+            padding: 0 1em;
+        }
+    }
+
+    .footer-column-wrapper {
+        margin: 0 1em;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .article {
+        margin: 0 1em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .main.has-sidebar {
+        width: 100%;
+    }
+
+    .sidebar {
+        //width: 100%;
+        display: none;
+    }
+
+    .article .img-about {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 560px) {
+     .site-logo-text {
+         width: 90%;
+     }
+     
+     .navbar2 {
+         display: none;
+     }
+
+     .profile {
+         display: block;
+         width: 10%;
+     }
+ }
+
+@media screen and (max-width: 440px) {
+    .article {
+        .img-me {
+            width: 100%;
+        }
+    }
+}
