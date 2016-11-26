@@ -1,0 +1,43 @@
+@lightColor1: #fff;
+@lightColor2: #eee;
+@lightColor3: #ddd;
+@lightColor4: #333;
+
+@lightBackgroundColor: linear-gradient(to right, @lightColor3, @lightColor1);
+
+html.light {
+    .outer-wrap-header {
+        background: @lightBackgroundColor;
+    }
+
+    .site-header {
+        .selected,
+        .selected-parent {
+            background: @lightColor1;
+        }
+
+        .navbar2 {
+            a:hover {
+                
+                background: linear-gradient(to right, @lightColor1, @lightColor2);
+            }
+        }
+    }
+
+    .sidebar {
+        a {
+            color: @lightColor4;
+        }
+
+        li:hover {
+            background-color: @lightColor2;
+        }
+        .selected {
+            background-color: @lightColor3;
+        }
+    }
+
+    .outer-wrap-footer {
+        background: @lightBackgroundColor;
+    }
+}

@@ -1,0 +1,72 @@
+@darkBackgroundColor: #1B1B1B;
+@darkColorText: #eee;
+
+@dark-primary-0: #B7A85C;	/* Main Primary dark */
+@dark-primary-1: #FFF6CA;
+@dark-primary-2: #DCCF8F;
+@dark-primary-3: #958639;
+@dark-primary-4: #75661B;
+
+@dark-complement-0: #54467E;	/* Main Complement dark */
+@dark-complement-1: #9D94B6;
+@dark-complement-2: #746897;
+@dark-complement-3: #3D2F67;
+@dark-complement-4: #271A51;
+
+
+html.dark {
+    background-color: @darkBackgroundColor;
+    color: @darkColorText;
+
+    .footer-column,
+    .site-footer {
+        a:link {
+            color: @dark-complement-1;
+        }
+        a:visited {
+            color: @dark-complement-3;
+        }
+    }
+    .outer-wrap-header {
+        background-color: @dark-primary-4;
+    }
+
+    .site-header {
+        .selected,
+        .selected-parent {
+            background: @dark-primary-3;
+        }
+
+        .navbar2 {
+            a:hover {
+                
+                background-color: @dark-primary-0;
+            }
+        }
+    }
+
+    .breadcrumb-list a {
+        color: #ddd;
+    }
+
+    .main h1 {
+        color: @dark-complement-2;
+    }
+
+    .next-previous a {
+        color: @dark-complement-1
+    }
+
+    .sidebar {
+        a {
+            color: @darkColorText;
+        }
+
+        li:hover {
+            background-color: @dark-primary-0;
+        }
+        .selected {
+            background-color: @dark-primary-3;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@colorful-primary-0: #845C46;	/* Main Primary colorful */
+@colorful-primary-1: #D4AE98;
+@colorful-primary-2: #AC8067;
+@colorful-primary-3: #6E4229;
+@colorful-primary-4: #522912;
+
+@colorful-secondary-1-0: #314256;	/* Main Secondary colorful (1) */
+@colorful-secondary-1-1: #67778A;
+@colorful-secondary-1-2: #475A70;
+@colorful-secondary-1-3: #1E3148;
+@colorful-secondary-1-4: #0F2136;
+
+@colorful-secondary-2-0: #4E723D;	/* Main Secondary colorful (2) */
+@colorful-secondary-2-1: #94B784;
+@colorful-secondary-2-2: #6C9559;
+@colorful-secondary-2-3: #375F23;
+@colorful-secondary-2-4: #21470F;
+
+@colorfulText: #eee;
+
+
+html.colorful {
+    background-color: @colorful-primary-3;
+    color: @colorfulText;
+
+
+    .outer-wrap-header {
+        background-color: @colorful-secondary-1-3;
+        border-bottom: 1px solid #000;
+        height: 3 * @magicNumber - 1;
+    }
+
+    .site-header {
+        .selected,
+        .selected-parent {
+            background: @colorful-secondary-1-2;
+            color: @colorfulText;
+        }
+
+        .navbar2 {
+            background-color: @colorful-secondary-1-3;
+            overflow-y: hidden;
+            li {
+                height: 3 * @magicNumber - 1;
+            }
+            a:hover {
+                background-color: @colorful-secondary-1-1;
+            }
+        }
+    }
+
+    .site-logo-text a {
+        color: @colorful-secondary-2-3;
+    }
+
+    .breadcrumb-list a {
+        color: @colorfulText;
+    }
+
+    .next-previous a {
+        color: @colorful-secondary-2-1;
+    }
+    .main h1 {
+        color: @colorful-secondary-1-1;
+    }
+
+    .sidebar-left {
+        background-color: @colorful-secondary-2-3;
+        .block {
+            padding-left: 0.5em;
+            padding-right: 1em;
+        }
+        a {
+            color: @colorfulText;
+            padding-left: 0.5em;
+        }
+
+        li:hover {
+            background-color: @colorful-secondary-2-2;
+        }
+        .selected {
+            background-color: @colorful-secondary-2-4;
+        }
+    }
+
+    .outer-wrap-footer {
+        background-color: @colorful-secondary-1-3;
+        border-top: 1px solid #000;
+    }
+
+    .main,
+    .footer-column,
+    .site-footer {
+        a:link {
+            color: @colorful-secondary-2-1;
+        }
+        a:visited {
+            color: @colorful-secondary-2-0;
+        }
+    }
+}

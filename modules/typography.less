@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Eczar');
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
+@import url('https://fonts.googleapis.com/css?family=Vesper+Libre');
+
+html.typography {
+    body {
+        font-family: 'Vesper Libre', serif;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Eczar', serif;
+    }
+
+    .outer-wrap-header {
+        background: @lightBackgroundColor;
+    }
+
+    .site-header {
+        .selected,
+        .selected-parent {
+            background: @lightColor1;
+        }
+
+        .navbar2 {
+            .fontSize(1.1em);
+            font-family: 'Boogaloo', sans-serif;
+            a:hover {
+                
+                background: linear-gradient(to right, @lightColor1, @lightColor2);
+            }
+        }
+    }
+
+    .sidebar {
+        .fontSize(1.1em);
+        font-family: 'Boogaloo', sans-serif;
+        a {
+            color: @lightColor4;
+        }
+
+        li:hover {
+            background-color: @lightColor2;
+        }
+        .selected {
+            background-color: @lightColor3;
+        }
+    }
+
+    .outer-wrap-footer {
+        background: @lightBackgroundColor;
+    }
+}

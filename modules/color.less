@@ -1,0 +1,68 @@
+// Color Palette
+
+@color-primary-0: #264365;	/* Main Primary color */
+@color-primary-1: #637B97;
+@color-primary-2: #3D597B;
+@color-primary-3: #122C4B;
+@color-primary-4: #041830;
+
+@color-complement-0: #9A7231;	/* Main Complement color */
+@color-complement-1: #E7C590;
+@color-complement-2: #BB9455;
+@color-complement-3: #724E13;
+@color-complement-4: #4A2D00;
+
+
+
+
+@colorBackgroundColor: linear-gradient(to right, @color-primary-1, #fff);
+
+html.color {
+    .outer-wrap-header {
+        background: @colorBackgroundColor;
+    }
+
+    .site-header {
+        .selected,
+        .selected-parent {
+            background-color: @color-primary-0;
+            color: #fff;
+        }
+
+        .navbar2 {
+            a:hover {
+                color: #fff;
+                background-color: @color-primary-2;
+            }
+        }
+    }
+
+    .main {
+        h1 {
+            color: @color-complement-0;
+        }
+    }
+
+    .sidebar {
+        a {
+            color: #333;
+        }
+
+        li:hover {
+            background-color: @color-primary-1;
+            a {
+                color: #fff;
+            }
+        }
+        .selected {
+            background-color: @color-primary-2;
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    .outer-wrap-footer {
+        background: @colorBackgroundColor;
+    }
+}
