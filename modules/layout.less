@@ -12,6 +12,29 @@ body {
     .typographyCodeElements();
     .typographyListElements();
     .typographyOtherElements();
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    table {
+        border: 1px solid #333;
+        box-sizing: border-box;
+        margin-top: 0;
+        margin-bottom: @magicNumber;
+        border-spacing: 0;
+
+        th,
+        td {
+            padding: 0 1em;;
+        }
+    }
 }
 
 .inner-wrap {
@@ -33,16 +56,16 @@ body {
     .sidebar {
         table {
             .fontSize(0.7em);
-            border: 1px solid #333;
-            box-sizing: border-box;
-            margin-top: 0;
-            margin-bottom: @magicNumber;
-            border-spacing: 0;
+            // border: 1px solid #333;
+            // box-sizing: border-box;
+            // margin-top: 0;
+            // margin-bottom: @magicNumber;
+            // border-spacing: 0;
 
-            th,
-            td {
-                padding: 0 1em;;
-            }
+            // th,
+            // td {
+            //     padding: 0 1em;;
+            // }
 
             tr {
                 text-align: left;
@@ -69,16 +92,16 @@ body.route-typography {
 
     table {
         .fontSize(1em);
-        border: 1px solid #333;
-        box-sizing: border-box;
-        margin-top: 0;
-        margin-bottom: @magicNumber;
-        border-spacing: 0;
+        // border: 1px solid #333;
+        // box-sizing: border-box;
+        // margin-top: 0;
+        // margin-bottom: @magicNumber;
+        // border-spacing: 0;
 
-        th,
-        td {
-            padding: 0 1em;;
-        }
+        // th,
+        // td {
+        //     padding: 0 1em;;
+        // }
     }
     
     code,
@@ -117,7 +140,7 @@ body.route-typography {
  */
 .site-header {
     .column(12);
-    height: 3 * @magicNumber;
+    height: 5 * @magicNumber;
     .site-logo-text {
         .fontSize(3em);
         a {
@@ -126,7 +149,7 @@ body.route-typography {
         }
     }
     .navbar2 {
-        float: right;
+        
     }
     .profile {
         display: none;
@@ -202,6 +225,14 @@ body.route-typography {
         display: inline-block;
         height: 2 * @magicNumber;
         width: 50px;
+    }
+
+    .share {
+        clear: both;
+    }
+
+    .meta-footer {
+        clear: both;
     }
     
 }
