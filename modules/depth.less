@@ -1,0 +1,40 @@
+@textShadow1: #808d93;
+@textShadow2: #cdd2d5;
+
+html.depth {
+
+    h1, h2 {
+        font-weight: bold;
+        text-shadow:
+                    0 1px @textShadow1,
+                    -1px 0 @textShadow2,
+                    -1px 2px @textShadow1,
+                    -2px 1px @textShadow2,
+                    -2px 3px @textShadow1,
+                    -3px 2px @textShadow2,
+                    -3px 4px @textShadow1,
+    }
+
+    .site-header {
+        .selected,
+        .selected-parent {
+            box-shadow: 0 -10px 20px #333, 0 -6px 6px #000;
+        }
+        .navbar2 {
+            a:hover {
+                box-shadow: 0 -10px 20px #333, 0 -6px 6px #000;
+            }
+        }
+    }
+
+    .sidebar {
+
+        li:hover {
+            box-shadow: -10px 0 10px #333, -6px 0 3px #666;
+        }
+        .selected {
+            box-shadow: -10px 0 10px #333, -6px 0 3px #666;
+        }
+    }
+
+}
