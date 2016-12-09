@@ -1,0 +1,78 @@
+.showLeftBorder() {
+    
+    &:before{
+        content:''; 
+        position: absolute;
+        height:90%; 
+        width:4px; 
+        top: 5%;
+        left: -4px;
+        border-left: 4px groove @color-primary-1;
+
+    }
+
+}
+
+html.theme3 {
+
+    .site-header {
+        background-image: url('../img/christmas.png');
+        background-size: auto 50%;
+        background-repeat: no-repeat;
+        background-position: 65% 0;
+        .navbar2 {
+            position: relative;
+            border-right: 4px groove @color-primary-1;
+            &:before{
+                content:''; 
+                position: absolute;
+                height:4px; 
+                width:50%; 
+                top: -4;
+                left: 50%;
+                border-top: 4px groove @color-primary-1;
+
+            }
+        }
+    }
+
+    .inner-wrap-main {
+        position: relative;
+        .showLeftBorder();
+        h1 {
+            background-image: url('../img/snow-160956_640.png');
+            background-position: right center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .sidebar a,
+        .sidebar h4 {
+            padding: 0 1em;
+        }
+        .next-previous,
+        article,
+        .blog-list {
+            padding: 0 1em;
+        }
+    }
+
+
+    .inner-wrap-after-main {
+        position: relative;
+        .showLeftBorder();
+
+        .after-main {
+            padding: 0 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    html.theme3 {
+
+        .site-header {
+            background-position: 50% 100%;
+        }
+    }
+}
